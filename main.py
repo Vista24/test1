@@ -1,7 +1,7 @@
 from pygame import *
 init()
 
-window_size =(500,500)
+window_size =(700,500)
 window = display.set_mode(window_size)
 display.set_caption("игра")
 time = time.Clock()
@@ -10,12 +10,15 @@ game = True
 
 player = Rect(0,0,100,100)
 
+big_rock = transform.scale(image.load("big_rock.png"),(100,100))
+
 while game:
     for e in event.get():
         if e.type == QUIT:
             game = False
     window.fill((0,0,0))
     draw.rect(window,(255,0,0),player) #
+    window.blit(big_rock,(100,100)) #
     keys = key.get_pressed()
     if keys[K_w]:
         player.y -= 5
