@@ -1,2 +1,2 @@
-# test1
+# my game
 mypzik
